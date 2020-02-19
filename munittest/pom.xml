@@ -144,6 +144,24 @@
 	</dependencies>
 
 	<repositories>
+	<repository>
+			<id>jboss</id>
+			<name>JBoss</name>
+			<url>http://repository.jboss.com/</url>
+		</repository>
+		<repository>
+			<id>oss-sonatype-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>mvn_rep</id>
+			<url>http://mvnrepository.com/</url>
+		</repository>
+		<repository>
+			<id>codehaus-releases</id>
+			<name>CodeHaus Releases</name>
+			<url>http://repo1.maven.org/maven/mule/dependencies/maven2</url>
+		</repository>
 		<repository>
 			<id>anypoint-exchange-v2</id>
 			<name>Anypoint Exchange</name>
