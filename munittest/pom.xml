@@ -26,6 +26,16 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudHubDeployment>
+            <uri>https://anypoint.mulesoft.com</uri>
+            <muleVersion>${mule.version}</muleVersion>
+            <username>srinu000</username>
+            <password>Srinu@515</password>
+            <applicationName>cicd-munit</applicationName>
+            <environment>Sandbox</environment>
+            <workerType>Micro</workerType>
+		    <redeploy>true</redeploy>
+        </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		<plugin>
