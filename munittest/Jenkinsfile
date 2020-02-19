@@ -36,4 +36,3 @@ pipeline {
     maven 'M2'
   }
 }
-}
