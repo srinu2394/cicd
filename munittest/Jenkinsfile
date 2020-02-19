@@ -9,13 +9,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-            bat 'mvn -B -U -e -V clean -DskipTests install'
+            sh 'mvn -B -U -e -V clean -DskipTests install'
       }
     }
 
     stage('Test') {
       steps {
-          bat "mvn test"
+          sh "mvn test"
       }
     }
 
@@ -25,7 +25,7 @@ pipeline {
         APP_NAME = 'munitcicd'
       }
       steps {
-            bat 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%ANYPOINT_USR%" -Danypoint.password="%ANYPOINT_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%"  -Dcloudhub.worker="%WORKER%"'
+            sh 'mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%ANYPOINT_USR%" -Danypoint.password="%ANYPOINT_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%"  -Dcloudhub.worker="%WORKER%"'
       }
     }
   
