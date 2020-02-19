@@ -7,6 +7,11 @@ pipeline {
     WORKER = "Micro"
   }
   stages {
+    stage('Build') {
+      steps {
+            bat 'mvn -B -U -e -V clean -DskipTests install'
+      }
+    }
 
     stage('Test') {
       steps {
@@ -14,12 +19,6 @@ pipeline {
       }
     }
 
-stage('Build') {
-      steps {
-            bat 'mvn -B -U -e -V clean -DskipTests install'
-      }
-    }
-    
      stage('Deploy Development') {
       environment {
         ENVIRONMENT = 'Sandbox'
